@@ -14,6 +14,7 @@ export function useScrollAnimations() {
           opacity: 0,
           duration: 1,
           ease: 'power3.out',
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
@@ -28,6 +29,7 @@ export function useScrollAnimations() {
           opacity: 0,
           duration: 1.2,
           ease: 'power2.out',
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
@@ -44,6 +46,7 @@ export function useScrollAnimations() {
           duration: 0.8,
           stagger: 0.15,
           ease: 'power3.out',
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: 'top 80%',
@@ -74,6 +77,7 @@ export function useScrollAnimations() {
           opacity: 0,
           duration: 1,
           ease: 'power3.out',
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
@@ -89,6 +93,7 @@ export function useScrollAnimations() {
           opacity: 0,
           duration: 1,
           ease: 'power3.out',
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
@@ -103,6 +108,7 @@ export function useScrollAnimations() {
           opacity: 0,
           duration: 1,
           ease: 'power3.out',
+          immediateRender: false,
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
@@ -112,6 +118,14 @@ export function useScrollAnimations() {
       })
     })
 
-    return () => ctx.revert()
+    // Refresh ScrollTrigger after layout settles (e.g. Lenis, fonts, images)
+    const rafId = requestAnimationFrame(() => {
+      ScrollTrigger.refresh()
+    })
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      ctx.revert()
+    }
   }, [])
 }
