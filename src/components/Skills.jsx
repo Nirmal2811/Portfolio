@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { FaReact, FaBolt, FaPalette, FaFilm, FaBox, FaLink, FaDesktop, FaRocket } from 'react-icons/fa'
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaFigma, FaWordpress } from 'react-icons/fa'
+import { SiTailwindcss } from 'react-icons/si'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -95,16 +96,16 @@ export default function Skills() {
                   <span className="orbit-label">Core</span>
                 </div>
                 <div className="orbit-ring orbit-ring--1">
-                  <div className="orbit-dot" style={{ '--i': 0, color: '#61dafb' }}><FaReact /></div>
-                  <div className="orbit-dot" style={{ '--i': 1, color: '#f7df1e' }}><FaBolt /></div>
-                  <div className="orbit-dot" style={{ '--i': 2, color: '#f857a6' }}><FaPalette /></div>
-                  <div className="orbit-dot" style={{ '--i': 3, color: '#00c9a7' }}><FaFilm /></div>
+                  <div className="orbit-dot" style={{ '--i': 0, color: '#e44d26' }}><FaHtml5 /></div>
+                  <div className="orbit-dot" style={{ '--i': 1, color: '#264de4' }}><FaCss3Alt /></div>
+                  <div className="orbit-dot" style={{ '--i': 2, color: '#f7df1e' }}><FaJs /></div>
+                  <div className="orbit-dot" style={{ '--i': 3, color: '#61dafb' }}><FaReact /></div>
                 </div>
                 <div className="orbit-ring orbit-ring--2">
-                  <div className="orbit-dot" style={{ '--i': 0, color: '#88ce02' }}><FaBox /></div>
-                  <div className="orbit-dot" style={{ '--i': 1, color: '#6c63ff' }}><FaLink /></div>
-                  <div className="orbit-dot" style={{ '--i': 2, color: '#ff6b6b' }}><FaDesktop /></div>
-                  <div className="orbit-dot" style={{ '--i': 3, color: '#ffa502' }}><FaRocket /></div>
+                  <div className="orbit-dot" style={{ '--i': 0, color: '#7952b3' }}><FaBootstrap /></div>
+                  <div className="orbit-dot" style={{ '--i': 1, color: '#38bdf8' }}><SiTailwindcss /></div>
+                  <div className="orbit-dot" style={{ '--i': 2, color: '#f24e1e' }}><FaFigma /></div>
+                  <div className="orbit-dot" style={{ '--i': 3, color: '#21759b' }}><FaWordpress /></div>
                 </div>
               </div>
 
